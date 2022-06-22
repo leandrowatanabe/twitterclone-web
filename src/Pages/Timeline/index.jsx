@@ -10,7 +10,7 @@ export default function Timeline( {loggedInUser} ){
   const [tweets, setTweets] = useState([])
   
   async function getTweets() {
-    const res = await axios.get(`${import.meta.env.VITE_API_HOST_DEV}/tweets`, {
+    const res = await axios.get(`${import.meta.env.VITE_API_HOST}/tweets`, {
       headers:{
         Authorization: `Bearer ${loggedInUser.accessToken}`
       }

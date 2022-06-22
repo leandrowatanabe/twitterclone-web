@@ -10,7 +10,7 @@ export default function TweetForm( {loggedInUser , onSuccess} ){
     onSubmit: async (values, form) => {
       await axios({
         method: 'post',
-        url: `${import.meta.env.VITE_API_HOST_DEV}/tweets`,
+        url: `${import.meta.env.VITE_API_HOST}/tweets`,
         headers:{
           Authorization: `Bearer ${loggedInUser.accessToken}`
         },        

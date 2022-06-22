@@ -19,7 +19,7 @@ export default function SignUp({ signInUser }){
 
     const formik = useFormik({
         onSubmit: async values => {
-            const res = await axios.post(`${import.meta.env.VITE_API_HOST_DEV}/signup`, {
+            const res = await axios.post(`${import.meta.env.VITE_API_HOST}/signup`, {
                 name: values.name,
                 username: values.username,
                 email: values.email,
