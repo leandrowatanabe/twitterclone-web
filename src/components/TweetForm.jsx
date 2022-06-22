@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import axios from 'axios'
 import { useFormik } from 'formik'
 
@@ -11,12 +10,13 @@ export default function TweetForm( {loggedInUser , onSuccess} ){
     onSubmit: async (values, form) => {
       await axios({
         method: 'post',
-        url: `${import.meta.env.VITE_API_HOST}/tweets`,
+        url: `${import.meta.env.VITE_API_HOST_DEV}/tweets`,
         headers:{
           Authorization: `Bearer ${loggedInUser.accessToken}`
         },        
         data:{
-          text: values.text
+          text: values.text,
+          timestamp: Date.now()
         }
       })
       form.setFieldValue('text','')
