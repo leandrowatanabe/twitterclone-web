@@ -15,7 +15,6 @@ export default function Timeline( {loggedInUser} ){
         Authorization: `Bearer ${loggedInUser.accessToken}`
       }
     })
-    console.log(res.data)
     setTweets(res.data)
   }
 
