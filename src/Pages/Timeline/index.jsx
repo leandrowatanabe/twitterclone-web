@@ -9,6 +9,7 @@ import Tweet from '../../components/Tweet'
 export default function Timeline( {loggedInUser} ){
   const [tweets, setTweets] = useState([])
   
+  console.log(loggedInUser.accessToken)
   async function getTweets() {
     const res = await axios.get(`${import.meta.env.VITE_API_HOST}/tweets`, {
       headers:{
