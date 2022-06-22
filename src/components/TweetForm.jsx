@@ -1,3 +1,4 @@
+import React from 'react'
 import axios from 'axios'
 import { useFormik } from 'formik'
 
@@ -6,6 +7,7 @@ import Avatar from '../assets/avatar.svg'
 const MAX_TWEET_CHAR = 140
 
 export default function TweetForm( {loggedInUser , onSuccess} ){
+
   const formik = useFormik({
     onSubmit: async (values, form) => {
       await axios({
@@ -16,7 +18,7 @@ export default function TweetForm( {loggedInUser , onSuccess} ){
         },        
         data:{
           text: values.text,
-          timestamp: Date.now()
+          timestamp: `${Date.now()}`
         }
       })
       form.setFieldValue('text','')

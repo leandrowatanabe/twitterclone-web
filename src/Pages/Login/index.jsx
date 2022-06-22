@@ -23,7 +23,6 @@ export default function Login({ signInUser }){
                     password: values.password
                 }
             })
-
             signInUser(res.data)
         },
         initialValues:{
