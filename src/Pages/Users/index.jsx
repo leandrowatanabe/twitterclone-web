@@ -24,7 +24,8 @@ export default function Users( {loggedInUser} ){
   return(
     <>
     {users.length && users.map(user=>{return(
-      <div className="flex space-x-3 p-4 border-b border-silver">
+      
+      <div className="flex space-x-3 p-4 border-b border-silver" key={user.id} >
         <div >
           <img src={Avatar}  />
         </div>
