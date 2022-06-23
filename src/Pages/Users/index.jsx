@@ -31,9 +31,12 @@ export default function Users( {loggedInUser} ){
         <div className='space-y-1'>
             <span className='font-bold text-sm'> {user.name} </span>
             <span className='text-sm text-silver'>@{user.username}</span>
+
+            <div className='flex space-x-1 text-silver font-bold text-sm items-center'>
+              <span>{user.tweets.length} Tweets</span>
+            </div>
         </div>
-      </div>
-      )
+      </div>)
     })}
     </>    
   )

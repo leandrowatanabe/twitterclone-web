@@ -27,10 +27,18 @@ export default function Timeline( {loggedInUser} ){
 
   return(
     <>
+    
       <TweetForm loggedInUser={loggedInUser} onSuccess={getTweets}/>
 
       {tweets.length && tweets.map(tweet=>{return(
-        <Tweet key={tweet.id} name={tweet.user.name} username={tweet.user.username} avatar={Avatar} timestamp={tweet.timestamp}>
+        <Tweet 
+          key={tweet.id} 
+          name={tweet.user.name} 
+          username={tweet.user.username} 
+          avatar={Avatar} 
+          timestamp={tweet.timestamp}
+          likes={tweet.likes}
+        >
           {tweet.text}
         </ Tweet >)
       })}

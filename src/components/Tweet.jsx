@@ -1,7 +1,7 @@
 import React from 'react'
 import { HeartIcon } from '@heroicons/react/outline'
 
-export default function Tweet({ name, username, avatar, children, timestamp }){
+export default function Tweet({ name, username, avatar, children, timestamp, likes }){
   
   const postedAt = new Date(parseInt(timestamp))
   const min = Math.floor((Date.now() - postedAt)/60000)
@@ -34,7 +34,7 @@ export default function Tweet({ name, username, avatar, children, timestamp }){
           </p>
           <div className='flex space-x-1 text-silver text-sm items-center'>
             <HeartIcon className="w-6 stroke-1"/>
-            <span>1.2k</span>
+            <span>{likes}</span>
           </div>
       </div>
     </div>
