@@ -22,7 +22,6 @@ export default function Timeline( {loggedInUser} ){
     getTweets()
   },[])
 
-  console.log(tweets)
 
 
 
