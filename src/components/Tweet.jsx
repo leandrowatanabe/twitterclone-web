@@ -34,7 +34,7 @@ export default function Tweet({ name, username, avatar, children, timestamp, lik
           </p>
           <div className='flex space-x-1 text-silver text-sm items-center'>
             <HeartIcon className="w-6 stroke-1"/>
-            <span>{likes}</span>
+            <span>0</span>
           </div>
       </div>
     </div>

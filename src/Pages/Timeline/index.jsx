@@ -68,7 +68,7 @@ export default function Timeline( {loggedInUser} ){
           username={tweet.user.username} 
           avatar={Avatar} 
           timestamp={tweet.timestamp}
-          likes={tweet.likes}
+          likes={0}
         >
           {tweet.text}
         </ Tweet >
